@@ -1,0 +1,35 @@
+{
+    "name": "@altshiftab/document_creation",
+    "version": "0.0.1",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/altshiftab/document_creation.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "prepare": "npm run build",
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.2",
+        "puppeteer": "^24.21.0"
+    },
+    "dependencies": {
+        "@lit-labs/ssr": "^3.3.1",
+        "lit": "^3.3.1",
+        "pdf-lib": "^1.17.1",
+        "pdfjs-dist": "^5.4.149"
+    }
+}
