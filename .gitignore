@@ -1,6 +1,9 @@
-/.idea
-/*.iml
-/node_modules
-/package-lock.json
-/dist/*
-/.npmrc
+*
+!/.gitignore
+!/.npmignore
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+
+!/src
+!/src/**/*

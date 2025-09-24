@@ -1,13 +1,14 @@
 {
     "name": "@altshiftab/document_creation",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/altshiftab/document_creation.git"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "registry": "https://npm.pkg.github.com/",
+        "access": "public"
     },
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -24,7 +25,7 @@
     },
     "devDependencies": {
         "typescript": "^5.9.2",
-        "puppeteer": "^24.21.0"
+        "puppeteer": "^24.22.2"
     },
     "dependencies": {
         "@lit-labs/ssr": "^3.3.1",
