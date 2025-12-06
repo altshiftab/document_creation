@@ -128,6 +128,7 @@ export async function getPagedHeaders(pdfData: Uint8Array, headers: Header[]) {
     const pagedHeaders: PagedHeader[] = [];
 
     try {
+        pageLoop:
         for (let pageNum = 1; pageNum <= pdfDocument.numPages; pageNum++) {
             const page = await pdfDocument.getPage(pageNum);
 
@@ -159,7 +160,7 @@ export async function getPagedHeaders(pdfData: Uint8Array, headers: Header[]) {
                             let {done: localDone, value: header} = headersIterator.next();
                             done = localDone;
                             if (done)
-                                break;
+                                break pageLoop;
                             if (header === undefined)
                                 throw new Error("currentHeader is undefined");
 
